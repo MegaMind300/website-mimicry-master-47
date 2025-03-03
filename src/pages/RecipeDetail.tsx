@@ -51,11 +51,15 @@ const RecipeDetail = () => {
         </button>
       </div>
       
-      <div className="relative rounded-xl overflow-hidden mb-8 aspect-4/3 animate-scale-in">
+      <div className="relative rounded-xl overflow-hidden mb-8 aspect-video shadow-lg animate-scale-in">
         <img 
           src={meal.image} 
           alt={meal.title} 
           className="w-full h-full object-cover"
+          onError={(e) => {
+            // Fallback for any image loading errors
+            e.currentTarget.src = "/placeholder.svg";
+          }}
         />
       </div>
       

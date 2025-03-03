@@ -26,8 +26,17 @@ const MealCard = ({ id, title, calories, time, image, isFavorite = false }: Meal
       to={`/recipe/${id}`}
       className="bg-secondary rounded-xl overflow-hidden flex items-center gap-4 p-3 transition-all hover:translate-y-[-2px] animate-scale-in"
     >
-      <div className="w-20 h-20 rounded-lg overflow-hidden flex-shrink-0">
-        <img src={image} alt={title} className="w-full h-full object-cover" />
+      <div className="w-20 h-20 rounded-lg overflow-hidden flex-shrink-0 shadow-md">
+        <img 
+          src={image} 
+          alt={title} 
+          className="w-full h-full object-cover" 
+          loading="lazy"
+          onError={(e) => {
+            // Fallback for any image loading errors
+            e.currentTarget.src = "/placeholder.svg";
+          }}
+        />
       </div>
       
       <div className="flex-grow">
