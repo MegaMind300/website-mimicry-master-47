@@ -57,8 +57,7 @@ const Index = () => {
         {filteredMeals.map((meal, index) => (
           <div 
             key={meal.id} 
-            className={`stagger-${index + 1}`}
-            style={{ opacity: 0 }}
+            className={`animate-fade-in stagger-${index + 1}`}
           >
             <MealCard 
               id={meal.id}
