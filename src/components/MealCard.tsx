@@ -24,7 +24,7 @@ const MealCard = ({ id, title, calories, time, image, isFavorite = false }: Meal
   return (
     <Link 
       to={`/recipe/${id}`}
-      className="bg-secondary rounded-xl overflow-hidden flex items-center gap-4 p-3 transition-all hover:translate-y-[-2px] animate-scale-in"
+      className="bg-secondary rounded-xl overflow-hidden flex items-center gap-4 p-3 transition-all hover:bg-secondary/80 hover:translate-y-[-2px] animate-scale-in"
     >
       <div className="w-20 h-20 rounded-lg overflow-hidden flex-shrink-0 shadow-md">
         <img 
@@ -55,7 +55,7 @@ const MealCard = ({ id, title, calories, time, image, isFavorite = false }: Meal
       >
         <Heart 
           size={20} 
-          className={favorite ? "fill-accent text-accent" : "text-foreground/40"}
+          className={favorite ? "fill-primary text-primary" : "text-foreground/40"}
         />
       </button>
     </Link>

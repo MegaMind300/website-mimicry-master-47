@@ -13,8 +13,8 @@ const MealTypeSelector = ({ types, selectedType, onChange }: MealTypeProps) => {
           key={type}
           className={`px-4 py-2 rounded-full transition-all ${
             selectedType === type
-              ? 'bg-white text-background font-semibold'
-              : 'text-foreground/70'
+              ? 'bg-primary text-primary-foreground font-semibold'
+              : 'bg-secondary/50 text-foreground/70 hover:bg-secondary'
           }`}
           onClick={() => onChange(type)}
         >
