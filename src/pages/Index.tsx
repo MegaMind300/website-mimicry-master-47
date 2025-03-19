@@ -22,7 +22,7 @@ const Index = () => {
   return (
     <div className="pt-8 pb-16">
       <div className="animate-slide-up">
-        <h1 className="text-5xl font-extrabold tracking-tight mb-2 text-primary">MEALS</h1>
+        <h1 className="text-5xl font-extrabold tracking-tight mb-2 text-white">MEALS</h1>
         
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-1">

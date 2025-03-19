@@ -24,7 +24,7 @@ const MealCard = ({ id, title, calories, time, image, isFavorite = false }: Meal
   return (
     <Link 
       to={`/recipe/${id}`}
-      className="bg-secondary rounded-xl overflow-hidden flex items-center gap-4 p-3 transition-all hover:bg-secondary/80 hover:translate-y-[-2px] animate-scale-in"
+      className="bg-secondary rounded-xl overflow-hidden flex items-center gap-4 p-3 transition-all hover:bg-secondary/80 hover:translate-y-[-2px] animate-scale-in shadow-[0_0_8px_rgba(234,56,76,0.3)]"
     >
       <div className="w-20 h-20 rounded-lg overflow-hidden flex-shrink-0 shadow-md">
         <img 
